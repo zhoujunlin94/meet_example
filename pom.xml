@@ -12,6 +12,7 @@
 
     <modules>
         <module>auto-code</module>
+        <module>byte-buddy-test</module>
     </modules>
 
     <properties>
