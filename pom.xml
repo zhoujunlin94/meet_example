@@ -14,6 +14,7 @@
         <module>auto-code</module>
         <module>byte-buddy-test</module>
         <module>feign-test</module>
+        <module>jpa-test</module>
     </modules>
 
     <properties>
