@@ -1,0 +1,30 @@
+spring:
+  redis:
+    password: rediscluster
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+      shutdown-timeout: 10000ms
+    cluster:
+      max-redirects: 3
+      nodes:
+        - 192.168.56.10:8001
+        - 192.168.56.10:8002
+        - 192.168.56.10:8003
+        - 192.168.56.10:8004
+        - 192.168.56.10:8005
+        - 192.168.56.10:8006
+
+
+redis:
+  msg:
+    enable-pubsub: true
+    enable-queue: true
+    enable-delay-queue: true
+    queue-msg-handlers:
+      default: defaultQueueMsgHandler
+    pub-sub-msg-handlers:
+      default: defaultPubSubMsgHandler

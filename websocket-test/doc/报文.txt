@@ -1,0 +1,70 @@
+1. websocket在线测试工具
+https://qqe2.com/dev/websocket
+
+2. 连接请求
+ws://127.0.0.1:8900?token=zhoujunlin
+
+3. 连接响应
+{
+  "responseType":"TO_ONE",
+  "body":{
+    "bizType":"AUTH_RESPONSE",
+    "code":0,
+    "message":"认证成功"
+  }
+}
+
+{
+  "responseType":"TO_ALL",
+  "body":{
+    "bizType":"AUTH_RESPONSE",
+    "code":0,
+    "fromUser":"zhoujunlin"
+  }
+}
+
+4. PING响应
+PONG
+
+5. SEND_TO_ONE_REQUEST请求
+{
+	"requestType": "SEND_TO_ONE_REQUEST",
+	"body": {
+		"targetUser": "abc",
+		"msgId": "11111111111",
+		"content": "你好,websocket"
+	}
+}
+
+6. SEND_TO_ONE_REQUEST响应
+{
+  "responseType":"TO_ONE",
+  "body":{
+    "bizType":"SEND_TO_ONE_REQUEST",
+    "code":0,
+    "content":"你好, websocket",
+    "fromUser":"zhoujunlin",
+    "msgId":"11111111111"
+  }
+}
+
+7. SEND_TO_ALL_REQUEST请求
+{
+	"requestType": "SEND_TO_ALL_REQUEST",
+	"body": {
+		"msgId": "ffffffffffff",
+		"content": "hello,websocket"
+	}
+}
+
+8. SEND_TO_ALL_REQUEST响应
+{
+  "responseType":"TO_ALL",
+  "body":{
+    "bizType":"SEND_TO_ALL_REQUEST",
+    "code":0,
+    "content":"hello, websocket",
+    "fromUser":"zhoujunlin",
+    "msgId":"ffffffffffff"
+  }
+}

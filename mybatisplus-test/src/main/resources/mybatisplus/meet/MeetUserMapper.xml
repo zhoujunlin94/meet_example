@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.zhoujunlin94.example.mybatisplus.mapper.meet.MeetUserMapper">
+  <resultMap id="BaseResultMap" type="io.github.zhoujunlin94.example.mybatisplus.model.meet.MeetUser">
+    <!--@mbg.generated generated on Mon Mar 27 22:04:04 CST 2023.-->
+    <!--@Table meet_user-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Mon Mar 27 22:04:04 CST 2023.-->
+    id, user_id, user_name
+  </sql>
+</mapper>

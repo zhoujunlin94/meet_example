@@ -1,0 +1,19 @@
+### 登录
+POST http://127.0.0.1:8080/login?username=zhoujunlin&password=123
+Accept: */*
+Cache-Control: no-cache
+
+
+
+
+
+
+###
+
+GET http://127.0.0.1:8080/admin
+
+###
+GET http://127.0.0.1:8080/postAuthorize
+Authentication: Bearer eyJhbGciOiJSUzI1NiIsInppcCI6IkdaSVAifQ.H4sIAAAAAAAAAA3KSwqAIBQF0L3csQM_qc9200slJSwoIYr2Xmd8HhydMeJetl57W0uDQLp2jMqRtIEoOIF6lv9ECj7RrEkmMzDzFG3WinNW0httHd4PHtuw8k4AAAA.kTr2IMKqH60CohnENTioCSDXoXjzyDi6imYxTbEFm-6-mymAwhK8PN9dwN1PxpBj-9z6xR-25r0YjCa2dxQFRGaSLnagWKZxT7JxAYPPAJLzOZ5Uh6_H-fwzovx_qpOB0DNAvaySNON4tgqUKWf-QhTmC_r7mEkOwA13FBNYV8M
+
+

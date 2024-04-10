@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.zhoujunlin94.example.seata.ds.repository.db.mapper.account.AccountMapper">
+  <resultMap id="BaseResultMap" type="io.github.zhoujunlin94.example.seata.ds.repository.db.entity.account.Account">
+    <!--@mbg.generated generated on Thu Sep 21 22:36:08 CST 2023.-->
+    <!--@Table account-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="balance" jdbcType="DOUBLE" property="balance" />
+    <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Thu Sep 21 22:36:08 CST 2023.-->
+    id, balance, last_update_time
+  </sql>
+</mapper>

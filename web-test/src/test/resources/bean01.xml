@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bean01"
+          class="io.github.zhoujunlin94.example.web.spring.applicationcontext.ApplicationContextTest02.Bean01"/>
+
+    <bean id="bean02"
+          class="io.github.zhoujunlin94.example.web.spring.applicationcontext.ApplicationContextTest02.Bean02">
+        <property name="bean01" ref="bean01"/>
+    </bean>
+
+
+    <!--
+    相当于  AnnotationConfigUtils.registerAnnotationConfigProcessors(beanFactory);  此功能
+    加载一些内置处理器
+    -->
+    <!--    <context:annotation-config/> -->
+
+</beans>

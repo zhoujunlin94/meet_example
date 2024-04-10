@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.zhoujunlin94.example.mybatisplus.mapper.meet.JsonTableMapper">
+  <resultMap id="BaseResultMap" type="io.github.zhoujunlin94.example.mybatisplus.model.meet.JsonTable">
+    <!--@mbg.generated generated on Fri Apr 21 10:11:32 CST 2023.-->
+    <!--@Table json_table-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="json_str" typeHandler="io.github.zhoujunlin94.example.mybatisplus.config.JsonTypeHandler" property="jsonStr" />
+    <result column="json_obj" typeHandler="io.github.zhoujunlin94.example.mybatisplus.config.JsonTypeHandler" property="jsonObj" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Fri Apr 21 10:11:32 CST 2023.-->
+    id, json_str, json_obj
+  </sql>
+
+</mapper>

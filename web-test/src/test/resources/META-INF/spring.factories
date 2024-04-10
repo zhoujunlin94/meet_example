@@ -1,0 +1,6 @@
+io.github.zhoujunlin94.example.web.springboot.autoconfiguration.TestAutoConfiguration.MyImportSelector=\
+io.github.zhoujunlin94.example.web.springboot.autoconfiguration.TestAutoConfiguration.AutoConfiguration1,\
+io.github.zhoujunlin94.example.web.springboot.autoconfiguration.TestAutoConfiguration.AutoConfiguration2
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.github.zhoujunlin94.example.web.springboot.autoconfiguration.TestMyAutoConfiguration.AutoConfiguration1,\
+io.github.zhoujunlin94.example.web.springboot.autoconfiguration.TestMyAutoConfiguration.AutoConfiguration2

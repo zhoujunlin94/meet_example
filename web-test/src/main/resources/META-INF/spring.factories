@@ -1,0 +1,5 @@
+org.springframework.context.ApplicationContextInitializer=\
+  io.github.zhoujunlin94.example.web.extpoint.initializer.DemoApplicationContextInitializer
+org.springframework.context.ApplicationListener=\
+  io.github.zhoujunlin94.example.web.extpoint.listener.DemoStartingApplicationListener,\
+  io.github.zhoujunlin94.example.web.extpoint.listener.DemoStartedApplicationListener

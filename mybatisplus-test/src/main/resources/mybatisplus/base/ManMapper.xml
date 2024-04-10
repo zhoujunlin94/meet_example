@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="io.github.zhoujunlin94.example.mybatisplus.mapper.base.ManMapper">
+
+    <resultMap id="m_b" type="io.github.zhoujunlin94.example.mybatisplus.model.base.Man">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="laoPoId" column="lao_po_id"/>
+    </resultMap>
+
+    <resultMap id="m_r" type="io.github.zhoujunlin94.example.mybatisplus.model.base.Man" extends="m_b">
+        <association property="laoPo" column="lao_po_id"
+                     select="io.github.zhoujunlin94.example.mybatisplus.mapper.base.WomanMapper.selectById"/>
+        <collection property="waWa" column="id"
+                    select="io.github.zhoujunlin94.example.mybatisplus.mapper.base.ChildMapper.selectByLaoHanId"/>
+    </resultMap>
+
+    <select id="selectLinkById" resultMap="m_r">
+        select *
+        from man
+        where id = #{id}
+    </select>
+</mapper>

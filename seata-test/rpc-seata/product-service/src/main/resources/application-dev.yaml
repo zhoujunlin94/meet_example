@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    # 数据源
+    product:
+      url: jdbc:mysql://124.221.56.164:3306/seata_product?useSSL=false&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull&useUnicode=true&autoReconnect=true&failOverReadOnly=false&useAffectedRows=true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+      # 指定为HikariDataSource
+      type: com.zaxxer.hikari.HikariDataSource
+      # hikari连接池配置
+      hikari:
+        pool-name: HikariCP-product
+        minimum-idle: 5
+        idle-timeout: 240000
+        maximum-pool-size: 10
+        auto-commit: true
+        max-lifetime: 300000
+        connection-timeout: 10000
+        connection-test-query: SELECT 1
+
+# Seata 配置项，对应 SeataProperties 类
+seata:
+  # Seata 应用编号，默认为 ${spring.application.name}
+  application-id: ${spring.application.name}
+  # Seata 事务组编号，用于 TC 集群名
+  tx-service-group: ${spring.application.name}-group
+  # 服务配置项，对应 ServiceProperties 类
+  service:
+    # 虚拟组和分组的映射
+    vgroup-mapping:
+      product-service-group: default
+    # 分组和 Seata 服务的映射
+    grouplist:
+      default: 127.0.0.1:8091
+
+
+
+
+
+logging:
+  level:
+    io.github.zhoujunlin94.example.seata.product.*: debug
+  config: classpath:logback.xml
