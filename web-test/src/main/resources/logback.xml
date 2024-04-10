@@ -121,7 +121,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 
     <root>
         <!--SLF4J 日志级别从小到大trace>debug>info>warn>error-->
-        <level value="warn"/>
+        <level value="info"/>
         <appender-ref ref="console"/>
         <appender-ref ref="debug_file"/>
         <appender-ref ref="info_file"/>
