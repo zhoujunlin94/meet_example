@@ -13,6 +13,7 @@
     <modules>
         <module>auto-code</module>
         <module>byte-buddy-test</module>
+        <module>feign-test</module>
     </modules>
 
     <properties>
@@ -27,6 +28,21 @@
                 <version>${meet.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.github.zhoujunlin94</groupId>
+                <artifactId>meet-web</artifactId>
+                <version>${meet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.zhoujunlin94</groupId>
+                <artifactId>meet-feign</artifactId>
+                <version>${meet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.zhoujunlin94</groupId>
+                <artifactId>meet-tk_mybatis</artifactId>
+                <version>${meet.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
