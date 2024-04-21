@@ -15,7 +15,6 @@
         <module>byte-buddy-test</module>
         <module>feign-test</module>
         <module>jpa-test</module>
-        <module>mybatis-test</module>
     </modules>
 
     <properties>
