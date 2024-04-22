@@ -19,7 +19,7 @@
         <module>rabbitmq-test</module>
         <module>redis-test</module>
         <module>seata-test</module>
-        <module>seata-test</module>
+        <module>security-test</module>
         <module>simple-test</module>
         <module>web-test</module>
         <module>websocket-test</module>
