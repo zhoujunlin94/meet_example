@@ -11,8 +11,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>auto-code</module>
-        <module>byte-buddy-test</module>
         <module>feign-test</module>
         <module>jpa-test</module>
         <module>mybatisplus-test</module>
@@ -20,13 +18,12 @@
         <module>redis-test</module>
         <module>seata-test</module>
         <module>security-test</module>
-        <module>simple-test</module>
         <module>web-test</module>
         <module>websocket-test</module>
     </modules>
 
     <properties>
-        <meet.version>1.1.0</meet.version>
+        <meet.version>1.1.8</meet.version>
     </properties>
 
     <dependencyManagement>
