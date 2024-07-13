@@ -24,6 +24,7 @@
         <dependency>
             <groupId>io.github.zhoujunlin94</groupId>
             <artifactId>meet-tk_mybatis</artifactId>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>io.seata</groupId>

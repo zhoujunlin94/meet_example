@@ -23,7 +23,7 @@
     </modules>
 
     <properties>
-        <meet.version>1.1.8</meet.version>
+        <meet.version>1.1.9</meet.version>
     </properties>
 
     <dependencyManagement>
