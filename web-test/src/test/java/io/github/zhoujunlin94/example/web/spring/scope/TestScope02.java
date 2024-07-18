@@ -1,6 +1,5 @@
 package io.github.zhoujunlin94.example.web.spring.scope;
 
-import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -14,7 +13,7 @@ import tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration;
  * <p>
  * 获取多例bean的方式
  */
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, MybatisAutoConfiguration.class, MapperAutoConfiguration.class})
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, MapperAutoConfiguration.class})
 public class TestScope02 {
 
     public static void main(String[] args) {

@@ -1,6 +1,5 @@
 package io.github.zhoujunlin94.example.web.springboot.autoconfiguration;
 
-import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigurationPackages;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -71,7 +70,6 @@ public class TestDataSourceAutoConfiguration {
         public String[] selectImports(AnnotationMetadata importingClassMetadata) {
             return new String[]{
                     DataSourceAutoConfiguration.class.getName(),
-                    MybatisAutoConfiguration.class.getName(),
                     DataSourceTransactionManagerAutoConfiguration.class.getName(),
                     TransactionAutoConfiguration.class.getName()
             };

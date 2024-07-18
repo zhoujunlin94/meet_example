@@ -1,11 +1,11 @@
 package io.github.zhoujunlin94.example.websocket.util;
 
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.core.util.TypeUtil;
 import com.alibaba.fastjson.JSONObject;
 import io.github.zhoujunlin94.example.websocket.handler.base.MessageHandler;
 import io.github.zhoujunlin94.example.websocket.message.base.SocketRequest;
 import io.github.zhoujunlin94.example.websocket.message.base.SocketResponse;
-import io.github.zhoujunlin94.meet.common.util.ReflectUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.websocket.RemoteEndpoint;
@@ -165,7 +165,7 @@ public final class WebSocketUtil {
     }
 
     public static Class<SocketRequest> getMessageClass(MessageHandler<SocketRequest> handler) {
-        return (Class<SocketRequest>) ReflectUtils.getSuperClassGenericType(handler.getClass(), MessageHandler.class, 0);
+        return (Class<SocketRequest>) TypeUtil.getClass(TypeUtil.getTypeArgument(handler.getClass()));
     }
 
 }

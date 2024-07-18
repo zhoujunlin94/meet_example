@@ -1,7 +1,6 @@
 package io.github.zhoujunlin94.example.web.spring.aop.spring.springaop;
 
 import lombok.SneakyThrows;
-import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;
 import org.springframework.aop.framework.Advised;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,7 +16,7 @@ import java.lang.reflect.Method;
  * @desc 依赖注入和初始化影响的原始对象
  * 代理与目标是两个对象，两者成员变量并不共用
  */
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, MybatisAutoConfiguration.class, MapperAutoConfiguration.class})
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, MapperAutoConfiguration.class})
 public class TestSpringAOP {
 
     @SneakyThrows

@@ -11,7 +11,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>feign-test</module>
         <module>jpa-test</module>
         <module>mybatisplus-test</module>
         <module>rabbitmq-test</module>
