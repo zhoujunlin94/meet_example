@@ -14,7 +14,6 @@
         <module>jpa-test</module>
         <module>mybatisplus-test</module>
         <module>rabbitmq-test</module>
-        <module>redis-test</module>
         <module>seata-test</module>
         <module>security-test</module>
         <module>web-test</module>
