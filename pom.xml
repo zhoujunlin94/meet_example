@@ -18,6 +18,7 @@
         <module>security-test</module>
         <module>web-test</module>
         <module>websocket-test</module>
+        <module>mqtt_test</module>
     </modules>
 
     <properties>
