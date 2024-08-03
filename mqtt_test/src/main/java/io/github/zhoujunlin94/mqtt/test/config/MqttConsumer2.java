@@ -45,7 +45,7 @@ public class MqttConsumer2 {
             });
 
             client.connect(options);
-            client.subscribe("$share/group1/mqtt/test", 0);
+            client.subscribe("$share/cluster/mqtt/test", 0);
         } catch (Exception e) {
             e.printStackTrace();
         }

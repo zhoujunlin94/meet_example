@@ -48,7 +48,7 @@ public class MqttConsumer {
 
             // $share/{GroupID}/{Topic}  通过mqtt的共享主题模式达到集群消费模式
             // 正常模式就是广播消费
-            client.subscribe("$share/group1/mqtt/test", 0);
+            client.subscribe("$share/cluster/mqtt/test", 0);
         } catch (Exception e) {
             e.printStackTrace();
         }
