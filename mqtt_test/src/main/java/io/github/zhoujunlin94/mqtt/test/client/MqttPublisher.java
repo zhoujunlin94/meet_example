@@ -1,4 +1,4 @@
-package io.github.zhoujunlin94.mqtt.test.config;
+package io.github.zhoujunlin94.mqtt.test.client;
 
 import cn.hutool.core.util.IdUtil;
 import com.alibaba.fastjson.JSONObject;
@@ -19,7 +19,7 @@ public class MqttPublisher {
 
     @SneakyThrows
     public static void main(String[] args) {
-        MqttClient client = new MqttClient("tcp://broker.emqx.io:1883", "b25b0d43dd134a52b4e1fedb486c335a", new MemoryPersistence());
+        MqttClient client = new MqttClient("tcp://broker.emqx.io:1883", MqttClient.generateClientId(), new MemoryPersistence());
         MqttConnectOptions options = new MqttConnectOptions();
         options.setCleanSession(false);
         options.setKeepAliveInterval(60);
