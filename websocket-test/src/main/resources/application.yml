@@ -1,6 +1,0 @@
-server:
-  port: 8900
-
-spring:
-  profiles:
-    active: dev

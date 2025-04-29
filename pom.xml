@@ -22,7 +22,8 @@
     </modules>
 
     <properties>
-        <meet.version>1.1.9</meet.version>
+        <meet.version>3.0.12</meet.version>
+        <mqtt.version>1.2.5</mqtt.version>
     </properties>
 
     <dependencyManagement>
@@ -57,7 +58,7 @@
             <dependency>
                 <groupId>org.eclipse.paho</groupId>
                 <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
-                <version>1.2.5</version>
+                <version>${mqtt.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
