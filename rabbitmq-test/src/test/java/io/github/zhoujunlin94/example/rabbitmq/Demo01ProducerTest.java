@@ -1,17 +1,15 @@
 package io.github.zhoujunlin94.example.rabbitmq;
 
-import com.alibaba.fastjson.JSONObject;
 import io.github.zhoujunlin94.example.rabbitmq.producer.Demo01Producer;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.amqp.core.Message;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
-import javax.annotation.Resource;
 import java.util.concurrent.CountDownLatch;
 
 /**
@@ -73,17 +71,7 @@ public class Demo01ProducerTest {
     @Test
     public void testAsyncSend2() throws InterruptedException {
         int id = (int) (System.currentTimeMillis() / 1000);
-        producer.asyncSend2(id).addCallback(new ListenableFutureCallback<Message>() {
-            @Override
-            public void onSuccess(Message result) {
-                log.info("[testAsyncSend2][发送编号：[{}] 发送成功, result:{}]", id, JSONObject.toJSONString(result));
-            }
-
-            @Override
-            public void onFailure(Throwable ex) {
-                log.info("[testAsyncSend2][发送编号：[{}] 发送异常]]", id, ex);
-            }
-        });
+        producer.asyncSend2(id);
         // 阻塞等待，保证消费
         new CountDownLatch(1).await();
     }

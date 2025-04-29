@@ -1,9 +1,10 @@
 package io.github.zhoujunlin94.example.jpa;
 
 import cn.hutool.core.collection.CollUtil;
-import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson2.JSONArray;
 import io.github.zhoujunlin94.example.jpa.model.meet.MeetUser;
 import io.github.zhoujunlin94.example.jpa.repository.meet.MeetUserRepository;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +14,6 @@ import org.springframework.data.domain.*;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**

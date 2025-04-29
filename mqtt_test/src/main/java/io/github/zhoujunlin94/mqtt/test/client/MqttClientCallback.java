@@ -1,7 +1,7 @@
 package io.github.zhoujunlin94.mqtt.test.client;
 
 import cn.hutool.core.lang.Console;
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSON;
 import io.github.zhoujunlin94.mqtt.test.handler.MqttMessageHandler;
 import io.github.zhoujunlin94.mqtt.test.handler.TestMqttMessageHandler;
 import lombok.SneakyThrows;
@@ -32,7 +32,7 @@ public class MqttClientCallback implements MqttCallback {
 
     @Override
     public void messageArrived(String topic, MqttMessage message) {
-        Console.log("messageArrived, topic:{}, message:{}", topic, JSONObject.toJSONString(message));
+        Console.log("messageArrived, topic:{}, message:{}", topic, JSON.toJSONString(message));
         mqttMessageHandlers.forEach(mqttMessageHandler -> mqttMessageHandler.handle(topic, message));
     }
 

@@ -1,10 +1,9 @@
 package io.github.zhoujunlin94.example.rabbitmq.producer;
 
 import io.github.zhoujunlin94.example.rabbitmq.message.Demo03Message;
+import jakarta.annotation.Resource;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
 
 /**
  * @author zhoujunlin

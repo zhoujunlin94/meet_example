@@ -1,7 +1,7 @@
 package io.github.zhoujunlin94.mqtt.test.client;
 
 import cn.hutool.core.util.IdUtil;
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import lombok.SneakyThrows;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;

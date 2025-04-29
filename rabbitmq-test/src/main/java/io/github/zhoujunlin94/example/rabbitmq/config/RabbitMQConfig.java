@@ -4,13 +4,12 @@ import io.github.zhoujunlin94.example.rabbitmq.message.Demo01Message;
 import io.github.zhoujunlin94.example.rabbitmq.message.Demo02Message;
 import io.github.zhoujunlin94.example.rabbitmq.message.Demo03Message;
 import io.github.zhoujunlin94.example.rabbitmq.message.Demo04Message;
+import jakarta.annotation.Resource;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.AsyncRabbitTemplate;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.annotation.Resource;
 
 /**
  * @author zhoujunlin

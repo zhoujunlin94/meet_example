@@ -1,19 +1,19 @@
 package io.github.zhoujunlin94.example.rabbitmq.producer;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSON;
 import io.github.zhoujunlin94.example.rabbitmq.message.Demo01Message;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageBuilder;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.AsyncRabbitTemplate;
+import org.springframework.amqp.rabbit.RabbitMessageFuture;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Component;
 import org.springframework.util.concurrent.ListenableFuture;
-
-import javax.annotation.Resource;
 
 /**
  * @author zhoujunlin
@@ -63,12 +63,12 @@ public class Demo01Producer {
         }
     }
 
-    public AsyncRabbitTemplate.RabbitFuture<Message> asyncSend2(Integer id) {
+    public RabbitMessageFuture asyncSend2(Integer id) {
         // 使用rabbitmq自身的异步api
         Demo01Message demo01Message = new Demo01Message();
         demo01Message.setId(id);
         Message message = MessageBuilder
-                .withBody(JSONObject.toJSONBytes(demo01Message))
+                .withBody(JSON.toJSONBytes(demo01Message))
                 .setContentType(MessageProperties.CONTENT_TYPE_JSON)
                 .build();
         return asyncRabbitTemplate.sendAndReceive(Demo01Message.EXCHANGE, Demo01Message.ROUTING_KEY, message);

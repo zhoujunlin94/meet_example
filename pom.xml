@@ -12,12 +12,8 @@
 
     <modules>
         <module>jpa-test</module>
-        <module>mybatisplus-test</module>
         <module>rabbitmq-test</module>
         <module>seata-test</module>
-        <module>security-test</module>
-        <module>web-test</module>
-        <module>websocket-test</module>
         <module>mqtt_test</module>
     </modules>
 

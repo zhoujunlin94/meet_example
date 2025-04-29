@@ -1,6 +1,8 @@
 package io.github.zhoujunlin94.example.jpa.config;
 
 import com.zaxxer.hikari.HikariDataSource;
+import jakarta.annotation.Resource;
+import jakarta.persistence.EntityManager;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,8 +21,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.annotation.Resource;
-import javax.persistence.EntityManager;
 import java.util.Map;
 import java.util.Objects;
 
