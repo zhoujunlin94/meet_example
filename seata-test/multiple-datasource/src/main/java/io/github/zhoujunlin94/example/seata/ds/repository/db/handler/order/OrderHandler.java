@@ -8,11 +8,10 @@ import io.github.zhoujunlin94.example.seata.ds.repository.db.mapper.order.OrderM
 import io.github.zhoujunlin94.meet.tk_mybatis.handler.TKHandler;
 import io.seata.core.context.RootContext;
 import io.seata.spring.annotation.GlobalTransactional;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.annotation.Resource;
 
 /**
  * @author zhoujunlin
